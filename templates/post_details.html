@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+<h2>{{ post.content }}</h2>
+<h3>By {{ post.poster.first_name }} {{ post.poster.last_name }}</h3>
+
+
+<form>
+  <div class="ml-auto mr-3">
+    <a href="/users/" class="btn btn-info">Cancel</a>
+
+  <button class="btn btn-primary btn-sm"formaction="/posts/{{post.id}}/edit"
+      formmethod="GET">Edit</button>
+
+
+        <a href="/posts/{{post.id}}/delete/" class="btn btn-info">Delete</a>
+
+</div>
+</form>
+
+
+
+{% endblock%}
