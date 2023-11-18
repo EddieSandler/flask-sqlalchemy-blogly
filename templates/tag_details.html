@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ tag.name }}</h1>
+
+
+
+
+<form>
+  <div class="ml-auto mr-3">
+    <a href="/tags/" class="btn btn-info">Cancel</a>
+
+  <button class="btn btn-primary btn-sm"formaction="/tags/{{tag.id}}/edit"
+      formmethod="GET">Edit</button>
+
+
+        <a href="/tags/{{tag.id}}/delete/" class="btn btn-info">Delete</a>
+
+</div>
+</form>
+
+
+
+{% endblock%}
